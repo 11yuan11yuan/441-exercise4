@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping cart</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="login.html">Shopping Cart</a></li>
+                <li><a href="support.html">Support</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Shopping Cart</h1>
+    <div class="products">
+        <div class="product" data-id="1">
+            <h2>Data Analytics and Visualisation Software</h2>
+            <h4 class="description">Data analytics software extracts insights from data and visualises them as charts and reports.</h4>
+            <p>Prices: $402</p>
+            <input type="number" min="0" value="0">
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product" data-id="2">
+            <h2>Network Security Software</h2>
+            <h4 class="description">Network security software safeguards computers and networks from malware, attacks, and data breaches.</h4>
+            <p>Prices: $522</p>
+            <input type="number" min="0" value="0">
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product" data-id="3">
+            <h2>Project Management Software</h2>
+            <h4 class="description">Project management software helps teams to plan, coordinate and execute projects.</h4>
+            <p>Prices: $329</p>
+            <input type="number" min="0" value="0">
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product" data-id="4">
+            <h2>Customer Relationship Management (CRM) Software</h2>
+            <h4 class="description">CRM software is used to manage customer relationships and sales processes. </h4>
+            <p>Prices: $476</p>
+            <input type="number" min="0" value="0">
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product" data-id="5">
+            <h2>Human Resource Management (HRM) Software</h2>
+            <h4 class="description">HRM software handles tasks like employee info, recruitment, training, appraisals, and compensation.</h4>
+            <p>Prices: $422</p>
+            <input type="number" min="0" value="0">
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+    <h2>Shopping Cart</h2>
+    <ul class="cart"></ul>
+    <button class="checkout">Checkout</button>
+    <button class="clearcart">Clear Cart</button>
+    <footer>
+        ©2024, zjy19858687599@163.com, Susan Inc. All Rights Reserved
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

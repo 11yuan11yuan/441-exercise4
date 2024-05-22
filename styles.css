@@ -1,0 +1,199 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+header {
+    background-color: #333333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block; /* Make navigation links horizontally aligned */
+    margin-right: 20px;
+    font-size: 24px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px; /* Increase inner margins of links */
+    border-radius: 5px; /* Add Border Rounding */
+    transition: background-color 0.3s; /* Adding Transition Effects */
+}
+
+nav ul li a:hover {
+    background-color: #555; /* Background colour on mouse hover */
+}
+
+#hero-banner img{
+    width: 100%; /* Fill the Hero Banner with images */
+    height: auto; /* Height scaled proportionally to width */
+    display: block; /* Ensure images are centred */
+}
+
+#content {
+    padding: 20px;
+    font-size: 24px;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.image-gallery img {
+    width: 30%;
+    border-radius: 5px;
+}
+
+footer {
+
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-size: larger;
+    margin-top: auto;
+}
+
+.container {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 82.5vh;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#cookieInfo {
+    text-align: center;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex-grow: 1;
+}
+
+input{
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    background-color: rgb(63, 128, 194);
+}
+
+button:hover {
+    background-color: rgb(68, 93, 118);
+    color: #fff;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.cart {
+    list-style-type: none;
+    padding: 0;
+}
+
+.cart li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+h4{
+    font-weight: 200;
+}
+
+.register-link {
+    text-align: center; 
+    margin-top: 10px; 
+  }
+  
+.register-link a {
+    color: #888; 
+    font-weight: bold; 
+    text-decoration: underline; /* Adding an underscore */
+}
+  
+.register-link a:hover {
+    color: rgb(113, 143, 183); /* Link text colour changes to blue on mouse hover */
+}
+
+.support-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.support-image {
+    flex: 1;
+}
+
+.support-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.support-text {
+    flex: 2;
+    padding-left: 20px;
+}
+
+.support-text p {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
