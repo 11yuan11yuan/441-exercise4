@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const checkoutButton = document.querySelector('.checkout');
     const clearCartButton = document.querySelector('.clearcart');
     const totalPriceElement = document.createElement('p');
+    totalPriceElement.id = "totalPrice";
     totalPriceElement.textContent = 'Total: $0';
     cartList.parentNode.insertBefore(totalPriceElement, cartList);
 
@@ -29,6 +30,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 removeFromCartButton.addEventListener('click', function () {
                     cartList.removeChild(cartItem);
                     updateTotalPrice();
+                    // Clear the input field of the removed product
+                    const inputField = button.parentElement.querySelector('input');
+                    inputField.value = '';
                 });
 
                 cartItem.appendChild(removeFromCartButton);
@@ -39,12 +43,26 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     checkoutButton.addEventListener('click', function () {
-        alert('Checkout Successfully!');
-        cartList.innerHTML = '';
-        updateTotalPrice();
+        const totalPriceElement = document.getElementById("totalPrice");
+        if(totalPriceElement.textContent != "Total: $0"){
+            const inputElements = document.querySelectorAll('input');
+            inputElements.forEach(function (input) {
+                input.value = '';
+            });
+            alert('Checkout Successfully!');
+            cartList.innerHTML = '';
+            updateTotalPrice();
+        }
+        else{
+            alert('Checkout was unsuccessful, please add to cart and checkout again.');
+        }
     });
     clearCartButton.addEventListener('click', function () {
         cartList.innerHTML = ''; // Empty Shopping Cart List
+        const inputElements = document.querySelectorAll('input');
+        inputElements.forEach(function (input) {
+            input.value = '';
+        });
         updateTotalPrice(); // Update total price
     });
 
@@ -56,9 +74,10 @@ document.addEventListener('DOMContentLoaded', function () {
             const quantity = parseInt(item.textContent.split(' - ')[1].split(' x ')[1]);
             totalPrice += price * quantity;
         });
-        totalPriceElement.textContent = 'Total:' + '$' + totalPrice;
+        totalPriceElement.textContent = 'Total:' + " " + '$' + totalPrice;
     }
 });
+
 
 // Function to set the username and password in localStorage
 function setUsername() {
